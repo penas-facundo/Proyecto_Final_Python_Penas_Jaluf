@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title> Crear Trineo </title>
+{% endblock title_head %}
+ 
+{% block h1_header %}
+Crear Trineo
+{% endblock h1_header %}
+
+{% block main %}
+
+
+
+
+ <form action="" method='POST' >
+
+    {% csrf_token %}
+    {{form}}
+
+    <input type="submit" value='Crear'>
+   
+
+</form>
+
+{% endblock main %}
+
+

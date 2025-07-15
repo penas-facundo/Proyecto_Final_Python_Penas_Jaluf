@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title> Eliminar Trineo </title>
+{% endblock title_head %}
+ 
+{% block h1_header %}
+Eliminar Trineo
+{% endblock h1_header %}
+
+{% block main %}
+
+
+
+
+<form action="" method='POST' >
+
+    {% csrf_token %}
+    Desea eliminar el trineo {{trineo.marca}} - {{trineo.color}} - {{trineo.anio}} ?
+
+    <input type="submit" value='Confirmar'>
+   
+
+</form>
+
+{% endblock main %}
+
+

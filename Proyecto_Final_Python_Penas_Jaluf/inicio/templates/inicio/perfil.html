@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+
+{% block title_head %}
+<title> Perfil </title>
+{% endblock title_head %}
+
+{% block h1_header %}
+Perfil: {{user.username}}
+{% endblock h1_header %}
+
+{% block main %}
+<body>
+    <h1>Detalles del Perfil</h1>
+    <p>Nombre de usuario: {{ nombre_usuario }}</p>
+    <p>Nombre: {{ nombre_usuario }}</p>
+    <p>Apellido: {{ apellido_usuario }}</p>
+    <p>Correo electrónico: {{ correo_usuario }}</p>
+    <p>Biografía: {{ usuario.datosextra.biografia }}</p>
+    <img src="{{ avatar_usuario.url }}" alt="Avatar del usuario" width="256" height="256">
+    <p><a href="{% url 'logout' %}">Cerrar sesión</a></p> 
+    <a href="{% url 'editar_perfil' %}">Editar perfil</a>
+</body>
+{% endblock main %}

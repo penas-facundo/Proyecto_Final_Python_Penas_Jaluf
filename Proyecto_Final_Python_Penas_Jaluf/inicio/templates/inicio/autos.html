@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title>Autos</title>
+{% endblock title_head %}
+ 
+{% block h1_header %}
+    Se creo el auto {{auto.marca}}
+{% endblock h1_header %}
+
+{% block main %}
+
+
+<p>
+    <a href={% url "crear_auto" %}>Crear Auto</a>
+</p>
+
+<form action="">
+    <input type="text" name='marca' placeholder='marca, descripcion'>
+    <input type="submit" value='Buscar'>
+</form>
+
+{% if listado_de_autos %}
+
+<ul>
+
+{% for auto in listado_de_autos %}
+<li>{{ auto }} | <a href="{% url 'editar_auto' auto.id %}">Editar</a> | <a href="{% url 'eliminar_auto' auto.id %}">Eliminar</a> | <a href="{% url 'detalle_auto' auto.id %}">Detalle</a></li>
+{% endfor %}
+
+</ul>
+
+{% else %}
+<p>No se encontraron autos</p>
+{% endif %}
+{% endblock main %}
+

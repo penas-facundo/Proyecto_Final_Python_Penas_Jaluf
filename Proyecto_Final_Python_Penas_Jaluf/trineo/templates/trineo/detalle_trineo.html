@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title>Trineo</title>
+{% endblock title_head %}
+ 
+{% block h1_header %}
+Trineo {{trineo.id}}
+{% endblock h1_header %}
+
+{% block main %}
+
+<ul>
+    <li>Marca: {{trineo.marca}} </li>
+    <li>color: {{trineo.color}} </li>
+    <li>Anio: {{trineo.anio}} </li>
+</ul>
+
+{% endblock main %}
+
+

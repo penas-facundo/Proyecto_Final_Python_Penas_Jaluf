@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block title_head %}
+<title>Editar Auto</title>
+{% endblock title_head %}
+ 
+{% block h1_header %}
+Editar Auto
+{% endblock h1_header %}
+
+{% block main %}
+
+ <form action="" method='POST' >
+
+    {% csrf_token %}
+    {{formulario}}
+
+    <input type="submit" value='Editar'>
+   
+
+</form>
+
+{% endblock main %}
+
+
